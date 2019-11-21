@@ -25,10 +25,11 @@ namespace Hello2
 
         public void DefaultZeros()
         {
-            initialBox.Text = "0";
+            initialBox.Text = "10000";
             additionalBox.Text = "0";
-            totalTimeBox.Text = "0";
+            totalTimeBox.Text = "10";
             listBox1.SelectedIndex = listBox1.TopIndex;
+            returnRateBox.Text = "7";
         }
         public void CalculateInvestment()
         {
@@ -45,7 +46,7 @@ namespace Hello2
                 {
                     for (int i = 1; i <= int.Parse(totalTimeBox.Text); i++)
                     {
-                        total = total * 1.07 + double.Parse(additionalBox.Text);
+                        total = total * (1 + (double.Parse(returnRateBox.Text)/100)) + double.Parse(additionalBox.Text);
                     }
                 }
 
@@ -54,7 +55,7 @@ namespace Hello2
                 {
                     for (int i = 1; i <= int.Parse(totalTimeBox.Text) * 12; i++)
                     {
-                        total = total * 1.0058333 + double.Parse(additionalBox.Text);
+                        total = total * (1 + (double.Parse(returnRateBox.Text) / 100 / 12)) + double.Parse(additionalBox.Text);
                     }
                 }
             }
@@ -95,6 +96,14 @@ namespace Hello2
             {
                 label2.Text = "Additional investment a year";
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("This software allows you to calculate what monthly income you can expect to get in X years.\n" +
+                "1. Type your initial amount that is already in your accounts.\n2. Then figure out how much do you put every Month/Year.\n" +
+                "Typical return rate for stock market is 7% (it is a default value). Bond market return is around 3-4%.");
         }
     }
 }
