@@ -33,7 +33,7 @@ namespace Hello2
         }
         public void CalculateInvestment()
         {
-
+            // find the final number
             double total = 0.0;
             try { total = double.Parse(initialBox.Text); }
             catch { total = 0.0; MessageBox.Show("No initial value"); }
