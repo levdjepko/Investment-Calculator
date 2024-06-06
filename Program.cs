@@ -14,7 +14,7 @@ namespace Hello2
         [STAThread]
         static void Main()
         {
-            // this is a WIndows app
+            // this is a Windows app. Potentially, outdated since 2022
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
