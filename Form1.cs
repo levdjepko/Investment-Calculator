@@ -25,11 +25,11 @@ namespace Hello2
 
         public void DefaultZeros()
         {
-            initialBox.Text = "10000";
+            initialBox.Text = "10000"; // amount
             additionalBox.Text = "0";
             totalTimeBox.Text = "10";
             listBox1.SelectedIndex = listBox1.TopIndex;
-            returnRateBox.Text = "7";
+            returnRateBox.Text = "7"; // return rate, defaults to 7%
         }
         public void CalculateInvestment()
         {
